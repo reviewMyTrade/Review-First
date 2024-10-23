@@ -1,0 +1,7 @@
+file name:ver_1p0 --> just ot get the windows in the required format
+File Name: ver_1p1 --> to get violations whenever we are clicking on the perticular rule form the frame
+File Name: ver-1p2:--> start using add_waiver button and make the color of the frame2 erorr into green
+File Name: ver_1p3: --> if input is filled then only make the button clickable
+File Name: ver_1p3p1: --> if input is filled then only make the button clickable do this with functions
+file Name: ver_1p4: --> to get the violation count on the frame1
+file Name: ver_1p4p1: --> to get the violation count on the frame3
