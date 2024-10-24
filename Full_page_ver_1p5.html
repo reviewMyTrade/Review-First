@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Prashant's GUI</title>
+  <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+  }
+    body {
+      margin: 0;
+    background-color: blanchedalmond;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_main {
+    width: 100%;
+    height: 100%;
+}
+
+.row1 {
+    height: 60%;
+    display: flex;
+}
+
+.row2 {
+    height: 40%;
+    display: flex;
+}
+
+#frame1 {
+    /* background-color: blue; */
+    background-color: #bbbbed;
+    width: 35%;
+    height: 100%;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: auto;
+}
+
+#frame2 {
+    /* background-color: red; */
+    background-color: #e4aaaa;
+    width: 65%;
+    height: 100%;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#frame3 {
+    /* background-color: yellow; */
+    background-color: #f2f29d;
+    width: 35%;
+    height: 100%;
+    vertical-align: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#frame4 {
+    /* background-color: green; */
+    background-color: #80d980;
+    width: 65%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.violations {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    background-color: #e4aaaa;
+    overflow: auto;
+    border: none;
+    vertical-align: top;
+}
+
+input {
+    width: 65%;
+    height: 50%;
+    border: none;
+    border-radius: 8px;
+}
+
+.first_btn {
+    padding: 10px 15px;
+    background-color: #010e1c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 120%;
+}
+
+.btn_frame4 {
+    padding: 10px 15px;
+    background-color: #010e1c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 15%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.caret {
+    cursor: pointer;
+}
+
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.caret-down::before {
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.nested {
+    display: none;
+    cursor: pointer;
+}
+
+.active {
+    display: block;
+}
+
+.hide_class {
+    display: none;
+}
+
+.green_class {
+    background-color: green;
+}
+
+.hide_button {
+    opacity: 0;
+    /* Make the button invisible */
+    pointer-events: none;
+    /* Disable interactions */
+
+}
+
+.show_button {
+    opacity: 100;
+    cursor: pointer;
+    /* Make the button invisible */
+}
+.gray_class{
+    background-color: #83dca1;
+}
+</style>
+</head>
+
+<body>
+  <!-- <h1>Hello Bro!!</h1>
+  <p>How are you Mr. <span>Prashant Dongre</span></p>
+  <p>Arjun is Good Boy</p>  -->
+  <div class="container_main">
+    <div class="row1">
+      <!-- <div id="frame1">Frame1 -->
+      <div id="frame1">
+        <ul>
+          <li id="item1"><span class="caret">item1</span>
+            <ul class="nested">
+              <li class="frame1_item"><span>item1_1</span></li>
+              <li class="frame1_item">item1_2</li>
+              <!-- <li class="frame1_item">item1.3</li>
+                          <li class="frame1_item">item1.4</li>
+                          <li class="frame1_item">item1.5</li>
+                          <li class="frame1_item">item1.6</li>
+                          <li class="frame1_item">item1.7</li>
+                          <li class="frame1_item">item1.8</li> -->
+            </ul>
+          </li>
+          <li id="item2"><span class="caret">item2</span>
+            <ul class="nested">
+              <li class="frame1_item">item2_1</li>
+              <li class="frame1_item">item2_2</li>
+              <li class="frame1_item">item2_3</li>
+            </ul>
+          </li>
+          <li id="item3"><span class="caret">item3</span>
+            <ul class="nested">
+              <li class="frame1_item">item3_1</li>
+              <li class="frame1_item">item3_2</li>
+            </ul>
+          </li>
+          <!-- <li id="item4"><span class="caret">item4</span>
+            <ul class="nested">
+              <li class="frame1_item">item4.1</li>
+              <li class="frame1_item">item4.2</li>
+              <li class="frame1_item">item4.3</li> -->
+          <!-- <li class="frame1_item">item4.4</li> 
+            <li class="frame1_item">item4.5</li>
+            <li class="frame1_item">item4.6</li>
+            <li class="frame1_item">item4.7</li>
+            <li class="frame1_item">item4.8</li>
+            <li class="frame1_item">item4.9</li>
+            <li class="frame1_item">item4.10</li>
+            <li class="frame1_item">item4.11</li>
+            <li class="frame1_item">item4.12</li>
+            <li class="frame1_item">item4.13</li>
+            <li class="frame1_item">item4.14</li>
+            <li class="frame1_item">item4.15</li>
+            <li class="frame1_item">item4.16</li>
+            <li class="frame1_item">item4.17</li>
+            <li class="frame1_item">item4.18</li>
+            <li class="frame1_item">item4.19</li>
+          </ul>
+          </li> -->
+          <!-- <li id="item5"><span class="caret">item5</span> -->
+          <!-- <ul class="nested">
+            <li class="frame1_item">item5.1</li>
+            <li class="frame1_item">item5.2</li>
+            <li class="frame1_item">item5.3</li> -->
+          <!-- </ul>
+          </li> -->
+
+        </ul>
+
+
+
+      </div>
+      <!-- <div id="frame2">Frame2 -->
+      <div id="frame2">
+        <select multiple class="violations"> <!--onchange="frame2_select()"> -->
+          <optgroup class="item item1_1 hide_class">
+            <option value="viol1" class="item1_1" onselect="frame2_item_select()">violation_item1_1_error_main_1
+            </option>
+            <option value="viol2" class="item1_1" onselect="frame2_item_select()">violation_item1_1_error_main_2
+            </option>
+            <option value="viol3" class="item1_1" onselect="frame2_item_select()">violation_item1_1_error_main_3
+            </option>
+            <option value="viol4" class="item1_1" onselect="frame2_item_select()">violation_item1_1_error_main_4
+            </option>
+            <option value="viol5" class="item1_1" onselect="frame2_item_select()">violation_item1_1_error_main_5
+            </option>
+            <option value="viol6" class="item1_1" onselect="frame2_item_select()">violation_item1_1_error_main_6
+            </option>
+            <option value="viol7" class="item1_1" onselect="frame2_item_select()">violation_item1_1_error_main_7
+            </option>
+            <option value="viol8" class="item1_1" onselect="frame2_item_select()">violation_item1_1_error_main_8
+            </option>
+          </optgroup>
+          <optgroup class="item item1_2 hide_class">
+            <option value="viol9" class="item1_2">violation_item1_2_warning_1</option>
+            <option value="viol10" class="item1_2">violation_item1_2_warning_2</option>
+            <option value="viol11" class="item1_2">violation_item1_2_warning_3</option>
+            <option value="viol12" class="item1_2">violation_item1_2_warning_4</option>
+            <option value="viol13" class="item1_2">violation_item1_2_warning_5</option>
+            <option value="viol14" class="item1_2">violation_item1_2_warning_6</option>
+            <option value="viol15" class="item1_2">violation_item1_2_warning_7</option>
+            <option value="viol16" class="item1_2">violation_item1_2_warning_8</option>
+            <option value="viol17" class="item1_2">violation_item1_2_warning_9</option>
+            <option value="viol18" class="item1_2">violation_item1_2_warning_10</option>
+          </optgroup>
+          <optgroup class="item item2_1 hide_class">
+            <option value="viol19" class="item2_1">violation_item2_1_information_1</option>
+            <option value="viol20" class="item2_1">violation_item2_1_information_2</option>
+            <option value="viol21" class="item2_1">violation_item2_1_information_3</option>
+            <option value="viol22" class="item2_1">violation_item2_1_information_4</option>
+            <option value="viol23" class="item2_1">violation_item2_1_information_5</option>
+          </optgroup>
+          <optgroup class="item item2_2 hide_class">
+            <option value="viol24" class="item2_2">violation_item_2_2_error_main_1</option>
+            <option value="viol25" class="item2_2">violation_item_2_2_error_main_2</option>
+            <option value="viol26" class="item2_2">violation_item_2_2_error_main_3</option>
+            <option value="viol27" class="item2_2">violation_item_2_2_error_main_4</option>
+            <option value="viol28" class="item2_2">violation_item_2_2_error_main_5</option>
+            <option value="viol29" class="item2_2">violation_item_2_2_error_main_6</option>
+          </optgroup>
+          <optgroup class="item item2_3 hide_class">
+            <option value="viol30" class="item2_3">violation_item_2_3_main_wanrings_1</option>
+            <option value="viol31" class="item2_3">violation_item_2_3_main_wanrings_2</option>
+            <option value="viol32" class="item2_3">violation_item_2_3_main_wanrings_3</option>
+            <option value="viol33" class="item2_3">violation_item_2_3_main_wanrings_4</option>
+            <option value="viol34" class="item2_3">violation_item_2_3_main_wanrings_5</option>
+            <option value="viol35" class="item2_3">violation_item_2_3_main_wanrings_6</option>
+            <option value="viol36" class="item2_3">violation_item_2_3_main_wanrings_7</option>
+            <option value="viol37" class="item2_3">violation_item_2_3_main_wanrings_8</option>
+            <option value="viol38" class="item2_3">violation_item_2_3_main_wanrings_9</option>
+            <option value="viol39" class="item2_3">violation_item_2_3_main_wanrings_10</option>
+          </optgroup>
+          <optgroup class="item item3_1 hide_class">
+            <option value="viol40" class="item3_1">violation_item3_1_must_fix_1</option>
+            <option value="viol41" class="item3_1">violation_item3_1_must_fix_2</option>
+            <option value="viol42" class="item3_1">violation_item3_1_must_fix_3</option>
+            <option value="viol43" class="item3_1">violation_item3_1_must_fix_4</option>
+            <option value="viol44" class="item3_1">violation_item3_1_must_fix_5</option>
+          </optgroup>
+          <optgroup class="item item3_2 hide_class">
+            <option value="viol45" class="item3_2">violation_3_2_Fix_it_1</option>
+            <option value="viol46" class="item3_2">violation_3_2_Fix_it_2</option>
+            <option value="viol47" class="item3_2">violation_3_2_Fix_it_3</option>
+            <option value="viol48" class="item3_2">violation_3_2_Fix_it_4</option>
+            <option value="viol49" class="item3_2">violation_3_2_Fix_it_5</option>
+            <option value="viol50" class="item3_2">violation_3_2_Fix_it_6</option>
+            <option value="viol51" class="item3_2">violation_3_2_Fix_it_7</option>
+            <option value="viol52" class="item3_2">violation_3_2_Fix_it_8</option>
+            <option value="viol53" class="item3_2">violation_3_2_Fix_it_9</option>
+            <option value="viol54" class="item3_2">violation_3_2_Fix_it_10</option>
+          </optgroup>
+
+
+
+        </select>
+
+
+      </div>
+    </div>
+    <div class="row2">
+      <!-- <div id="frame3">Frame3 -->
+      <div id="frame3">
+        <div class="button_class">
+          <button id="all" class="first_btn btn_main" onclick="change_color(this); frame3_all();">ALL</button>
+          <button id="waived" class="first_btn btn_main" onclick="change_color(this); frame3_waived()">Waived</button>
+          <button id="unwaived" class="first_btn btn_main" onclick="change_color(this); frame3_unwaived()">Un-Waived</button>
+          <button id="unused" class="first_btn btn_main" onclick="change_color(this);frame3_unused()">Un-Used</button>
+        </div>
+      </div>
+      <!-- <div id="frame4">Frame4 -->
+      <div id="frame4">
+        <p></p>
+        <!-- <button onclick="submitInput()">Add Waiver</button> -->
+        <button class="btn_frame4 btn_main hide_button" id="addWaiver"
+          onclick="change_color(this); add_waiver_clicked()">Add Waiver</button>
+        <input type="text" id="inputBox"
+          placeholder="Select Violations types --> violation item --> violation --> Add Justification --> click on Add Waiver"
+          disabled />
+        <!-- placeholder="Please provide the proper Justification to Add/Delete the waivers" disabled/> -->
+        <!-- <button onclick="submitInput()">Delete Waiver</button> -->
+        <button class="btn_frame4 btn_main" onclick="change_color(this)">Delete Waiver</button>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- <script src="script.js"></script> -->
+  <script>
+  // START: The below code till the END1 will create the treeview for the frame1 items
+var toggler = document.getElementsByClassName("caret");
+var i;
+// console.log(toggler)
+for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+        // console.log("we are reading", this.parentElement.querySelector(".nested"))
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+        higlight_selected(this)
+        // this.classList.toggle("gray_class");
+        //To disable the add waiver button once violation type is clicked ex. item1, item2
+        disable_add_waiver();
+        disable_input_box(true, "Please select the proper violation type items");
+    });
+}
+// END1: 
+
+// START: The below code till END2 will display the items in the frame2 based on the item selection on the frame1
+let frame1_click = document.getElementsByClassName("frame1_item")
+var p_und;
+// console.log(frame1_click)
+for (i = 0; i < frame1_click.length; i++) {
+    frame1_click[i].addEventListener("click", function() {
+        //To disable the add waiver button once violation item in frame1 is clicked Ex. item1.1
+        disable_add_waiver();
+        disable_input_box(true, "Please select the violation from the error window");
+        higlight_selected(this)
+        let p = this.textContent
+        p_und = p.replace('.', '_').replace(/\[.*/, "").trim()
+        // p here is item1.1 or item5.4
+        console.log("You have clicked on", p, p_und, "ok")
+        // p1 reports everything present in the violations class
+        let p1 = document.getElementsByClassName("violations")
+        // console.log("p1[0].innerHTML is ", p1[0].innerHTML)
+        let p1_inner_HTML = p1[0].innerHTML
+        let j;
+        p1[0].classList.remove("hide_class")
+        let p2 = document.getElementsByClassName("item")
+        for (k = 0; k < p2.length; k++) {
+            p2[k].classList.add("hide_class")
+        }
+        document.getElementsByClassName(`${p_und}`)[0].classList.remove("hide_class")
+    })
+
+}
+// END2
+
+
+// START: The below code till END3 will display the functionality of the add waiver button
+// JavaScript to add classes to options based on optgroup class
+var selectedValue;
+var select_element;
+var selectedOptions;
+// This code will display the selcted items from the frame2
+const selectElement = document.getElementsByClassName("violations")[0];
+selectElement.addEventListener("change", (event) => {
+    select_element = event.target
+    selectedOptions = Array.from(event.target.selectedOptions);
+    selectedOptions.forEach(option => {
+        const classList = option.classList;
+        console.log("Selected option classList:", classList);
+    });
+    //To disable the add waiver button once violation in frame2 is clicked
+    disable_add_waiver()
+    disable_input_box(false, "Please provide the proper Justification and click on Add/Delete waiver button")
+});
+
+const inputElement = document.getElementById("inputBox");
+console.log("entered input is outside: ", inputElement.value);
+// const selectedButton = document.getElementsByClassName("btn_main")
+function change_color(button) {
+    const classList12 = button.classList;
+    // console.log("Clicked button classes:", classList12);
+    // console.log("button", button)
+    button.style.backgroundColor = "red";
+    setTimeout(() => {
+        button.style.backgroundColor = "#010e1c";
+    }, 100);
+}
+
+
+
+function add_waiver_clicked() {
+    // document.getElementsByClassName("btn_frame4")
+    // Reset after 100 milliseconds (0.1 seconds)
+    // }
+
+    console.log("add waiver is clicked !!", selectedValue, select_element)
+    console.log("selected_option is: ", selectedOptions)
+    selectedOptions.forEach(option => {
+        // const classList = option.classList;
+        option.classList.add("green_class")
+    });
+    // select_option.classList.add("green_class")
+    // const inputElement = document.getElementById("inputBox");
+    let className1All = selectedOptions[0].className.split(' ')[0];
+    let className1Waived = selectedOptions[0].className;
+    let count_all1 = document.getElementsByClassName(className1All).length - 1;
+    let count_waived1 = document.getElementsByClassName(className1Waived).length;
+    let count_unwaived1 = count_all1 - count_waived1;
+    console.log("selected_option classname is: ", className1All);
+    console.log("entered input is: ", inputElement.value);
+    console.log("number is :", count_all1, count_waived1, count_unwaived1,);
+    document.getElementById("all").innerHTML = "ALL [" + count_all1 + "]";
+    document.getElementById("waived").innerHTML = "Waived [" + count_waived1 + "]";
+    document.getElementById("unwaived").innerHTML = "Un-Waived [" + count_unwaived1 + "]";
+
+
+
+    //To disable the add waiver button once add waiver is clicked
+    disable_add_waiver()
+    //To disable the input box once add waiver is clicked
+    disable_input_box(true, "Please select the violation from the error window")
+}
+// END3:
+// START: code till the END4 will be on adding valid comment and enabling the add_waiver GamepadButton
+let inputsProvided = document.getElementById('inputBox')
+inputsProvided.addEventListener('input', function() {
+    // console.log("inside function: ", inputsProvided.value)
+    document.getElementById("addWaiver").classList.remove("hide_button")
+    document.getElementById("addWaiver").classList.add("show_button")
+    if (inputsProvided.value.trim() == '') {
+        //To disable the add waiver button if proper justification is empty
+        disable_add_waiver()
+    }
+});
+
+function disable_add_waiver() {
+    document.getElementById("addWaiver").classList.add("hide_button")
+    document.getElementById("addWaiver").classList.remove("show_button")
+}
+function disable_input_box(value1, comment) {
+    inputElement.value = ''
+    document.getElementById("inputBox").disabled = value1;
+    document.getElementById("inputBox").placeholder = comment;
+}
+// END4:
+
+// START: code till END5 Add violation number to the frame1 and frame3 buttons
+const violationCat = document.getElementsByClassName("caret")
+
+for (i = 0; i < violationCat.length; i++) {
+    let lengthViolationCat = 0;
+    let violationType = violationCat[i].parentElement.getElementsByClassName("nested")[0].innerText.trim().replace('\n', '').replace(/\s+/g, ' ').split(/\s+/)
+    for (j = 0; j < violationType.length; j++) {
+        // console.log("violation type is: ", violationType[j], violationCat[i].innerText)
+        let lengthViolationType = document.getElementsByClassName(violationType[j]).length - 1;
+        if (lengthViolationType == -1) {
+            lengthViolationType = 0;
+        }
+        lengthViolationCat = lengthViolationCat + lengthViolationType;
+        // console.log("length of element with: ", violationType[j], " is ", lengthViolationType)
+        document.querySelectorAll('.frame1_item').forEach(ele => {
+            if (ele.innerText == violationType[j]) {
+                // console.log("we got the innerText: ", lengthViolationType, ele.innerText, ele.innerHTML, ele)
+                ele.innerHTML = violationType[j] + " [" + lengthViolationType + "]"
+                // console.log("2 we got the innerText: ", ele.innerText, ele.innerHTML)
+            }
+        });
+    }
+    // console.log("cat length is: ", lengthViolationCat)
+    violationCat[i].innerHTML += " [" + lengthViolationCat + "]"
+
+}
+function higlight_selected(first) {
+    document.querySelectorAll(".gray_class").forEach(ele => {
+        ele.classList.toggle('gray_class')
+    })
+    first.classList.toggle("gray_class");
+}
+
+
+// Violations count for the frame3
+// let frame1_clicked = document.querySelectorAll('.caret, .nested')
+let frame1_cat_clicked = document.querySelectorAll('.caret')
+let frame1_vio_clicked = document.querySelectorAll('.frame1_item')
+for (i = 0; i < frame1_cat_clicked.length; i++) {
+    frame1_cat_clicked[i].addEventListener("click", function() {
+        length1 = parseInt(this.innerHTML.replace(/.*\[/g, '').replace(/\]$/g, '').trim())
+        console.log("frame1_clicked is: ", this.innerText, length1, (typeof length1))
+        document.getElementById('all').innerHTML = "All [" + length1 + "]"
+        document.getElementById('waived').innerHTML = "Waived" // [" + length1 + "]"
+        document.getElementById('unwaived').innerHTML = "Un-Waived" // [" + length1 + "]"
+        console.log("ID:", this.parentElement.id ,"ok", this.parentElement);
+        let className1 = this.parentElement.id + "_"
+        let count_all2 = 0;
+        let count_waived2 = 0;
+        let count_unwaived2 = 0;
+        document.querySelectorAll(`[class*="${className1}"]`).forEach(ele => {
+            if (ele.tagName == "OPTION") {
+              count_all2 += 1;
+            }
+            if (ele.className.includes("green_class")) {
+              count_waived2 += 1;
+            }
+            count_unwaived2 = count_all2 - count_waived2
+        });
+        console.log("All are:", count_all2);
+        console.log("waived are:" ,count_waived2);
+        console.log("Un-waived are:" ,count_unwaived2);
+        document.getElementById('all').innerHTML = "All [" + count_all2 + "]"
+        document.getElementById('waived').innerHTML = "Waived [" + count_waived2 + "]"
+        document.getElementById('unwaived').innerHTML = "Un-Waived [" + count_unwaived2 + "]"
+    });
+}
+for (i = 0; i < frame1_vio_clicked.length; i++) {
+    frame1_vio_clicked[i].addEventListener("click", function() {
+        length2 = parseInt(this.innerHTML.replace(/.*\[/g, '').replace(/\]$/g, '').trim())
+        // console.log("frame1_vio_clicked is: ", this.innerText, length2, (typeof length2))
+        let all_count = length2
+        document.getElementById('all').innerHTML = "All [" + length2 + "]"
+        let classname_p2 = this.innerHTML.replace(/\[.*/g, '').replace(/\]$/g, '').trim()
+        // console.log("finally p2 is :", classname_p2)
+        let waived_class = classname_p2 + " green_class";
+        let waived_count = document.getElementsByClassName(waived_class).length;
+        // console.log("This will be good 5:", document.getElementsByClassName(waived_class).length, waived_class);
+        let unwaived_count = all_count - waived_count;
+        // console.log("all_count is: ", all_count)
+        // console.log("waived_count is: ", waived_count)
+        // console.log("unwaived_count is: ", unwaived_count)
+        document.getElementById('waived').innerHTML = "Waived [" + waived_count + "]"
+        document.getElementById('unwaived').innerHTML = "Unwaived [" + unwaived_count + "]"
+    });
+}
+
+// document.getElementById('all')
+// END5:
+
+//START: Function for the frame3 buttons (Add, Waived, Un-Waived)
+function frame3_all() {
+  console.log("all button in Fram3 is clicked")
+
+
+}
+function frame3_waived() {
+  console.log("Waived button in Fram3 is clicked", p_und)
+  document.querySelectorAll(`.${p_und}`)[0].classList.add("hide_class")
+  let p_und_with_green_class = "."+ p_und + ".green_class"
+  console.log("p_und2 is", p_und_with_green_class)
+  document.querySelectorAll(`${p_und_with_green_class}`).classList.remove("hide_class")
+
+
+}
+function frame3_unwaived() {
+  console.log("Un-Waived button in Fram3 is clicked")
+
+
+}
+function frame3_unused() {
+  console.log("Un-Used button in Fram3 is clicked")
+
+
+}
+//END6
+</script>
+</body>
+
+</html>
