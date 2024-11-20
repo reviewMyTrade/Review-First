@@ -618,20 +618,23 @@
   }
   // END4:
 
-  // START5: code till END5 Add violation number to the frame1 and frame3 buttons
+  // START5: code till END5 Add number of violation to the frame1 and frame3 buttons
   const violationCat = document.getElementsByClassName("caret")
 
   for (i = 0; i < violationCat.length; i++) {
     let lengthViolationCat = 0;
     // let violationType = violationCat[i].parentElement.getElementsByClassName("nested")[0].innerText.trim().replace('\n', '').replace(/\s+/g, ' ').split(/\s+/)
-    let violationType = violationCat[i].parentElement.getElementsByClassName("nested")[0].innerText.trim().replace(/ /g,'').replace(/\n/g, ' ').replace(/-/g,'').split(/\s+/)
+    let violationType = violationCat[i].parentElement.getElementsByClassName("nested")[0].innerText.trim().split(/\n/)
+    // let violationType = violationCat[i].parentElement.getElementsByClassName("nested")[0].innerText.trim().replace(/ /g,'').replace(/\n/g, ' ').replace(/-/g,'').split(/\s+/)
     // .replace('\n', '').replace(/\s+/g, '').split(/\s+/)
     console.log("This is the violationType", violationType)
     for (j = 0; j < violationType.length; j++) {
       console.log("violation type is: ", violationType[j], violationCat[i].innerText)
-      console.log("this is violation type",violationType[j],"okok")
-      let lengthViolationType = document.getElementsByClassName(violationType[j]).length - 1;
-      console.log("this is violation type",violationType[j],"okok", lengthViolationType,"ok")
+      console.log("this is violation type",violationType[j].trim(),"okok")
+      var a = violationType[j].trim().replace(/-/g,'').replace(/ /g,'')
+      // let lengthViolationType = document.getElementsByClassName(violationType[j]).length - 1;
+      let lengthViolationType = document.getElementsByClassName(a).length - 1;
+      console.log("this is violation type",violationType[j],"okok", lengthViolationType,"ok", a, "is")
       if (lengthViolationType == -1) {
         lengthViolationType = 0;
       }
@@ -640,8 +643,8 @@
       document.querySelectorAll('.frame1_item').forEach(ele => {
         let changedEle = ele.innerText.replace(/ /g,'').replace(/-/,'')
         console.log("Chenged ele is", changedEle, ele.innerText)
-        // if (ele.innerText == violationType[j]) {
-        if (changedEle == violationType[j]) {
+        if (ele.innerText == violationType[j].trim()) {
+        // if (changedEle == violationType[j]) {
           console.log("we got the innerText: ", lengthViolationType, ele.innerText, ele.innerHTML, ele)
           ele.innerHTML = violationType[j] + " [" + lengthViolationType + "]"
           console.log("2 we got the innerText: ", ele.innerText, ele.innerHTML)
