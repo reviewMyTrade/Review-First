@@ -183,10 +183,10 @@
         <ul>
           <li id="item1"><span class="caret">Functional </span>
             <ul class="nested">
-              <li class="frame1_item"><span>Non-Eq</span></li>
-              <li class="frame1_item">Not-Mapped</li>
-              <li class="frame1_item">Aborts</li>
-              <li class="frame1_item">Extra PI PO</li>
+              <li class="frame1_item Functional"><span>Non-Eq</span></li>
+              <li class="frame1_item Functional">Not-Mapped</li>
+              <li class="frame1_item Functional">Aborts</li>
+              <li class="frame1_item Functional">Extra PI PO</li>
               <!-- <li class="frame1_item">item</li> -->
               <!-- <li class="frame1_item">item1.6</li> -->
               <!-- <li class="frame1_item">item1.7</li> -->
@@ -195,15 +195,15 @@
           </li>
           <li id="item2"><span class="caret">Low-Power Violations</span>
             <ul class="nested">
-              <li class="frame1_item">CPG</li>
-              <li class="frame1_item">PST</li>
-              <li class="frame1_item">CPC</li>
+              <li class="frame1_item LowPowerViolations">CPG</li>
+              <li class="frame1_item LowPowerViolations">PST</li>
+              <li class="frame1_item LowPowerViolations">CPC</li>
             </ul>
           </li>
           <li id="item3"><span class="caret">Rule Check</span>
             <ul class="nested">
-              <li class="frame1_item">HRC3p10</li>
-              <li class="frame1_item">RTL7p1</li>
+              <li class="frame1_item RuleCheck">HRC3p10</li>
+              <li class="frame1_item RuleCheck">RTL7p1</li>
             </ul>
           </li>
           <!-- <li id="item4"><span class="caret">item4</span>
@@ -245,113 +245,97 @@
       <!-- <div id="frame2">Frame2 -->
       <div id="frame2">
         <select multiple class="violations"> <!--onchange="frame2_select()"> -->
-          <optgroup class="item NonEq">
-            <option value="viol1" class="NonEq hide_class" onselect="frame2_item_select()">
-              violation_NonEq_error_main_1
-            </option>
-            <option value="viol2" class="NonEq hide_class" onselect="frame2_item_select()">
-              violation_NonEq_error_main_2
-            </option>
-            <option value="viol3" class="NonEq hide_class" onselect="frame2_item_select()">
-              violation_NonEq_error_main_3
-            </option>
-            <option value="viol4" class="NonEq hide_class" onselect="frame2_item_select()">
-              violation_NonEq_error_main_4
-            </option>
-            <option value="viol5" class="NonEq hide_class" onselect="frame2_item_select()">
-              violation_NonEq_error_main_5
-            </option>
-            <option value="viol6" class="NonEq hide_class" onselect="frame2_item_select()">
-              violation_NonEq_error_main_6
-            </option>
-            <option value="viol7" class="NonEq hide_class" onselect="frame2_item_select()">
-              violation_NonEq_error_main_7
-            </option>
-            <option value="viol8" class="NonEq hide_class" onselect="frame2_item_select()">
-              violation_NonEq_error_main_8
-            </option>
+          <optgroup class="item Functional NonEq">
+            <option class="Functional NonEq hide_class">violation_NonEq_error_main_2</option>
+            <option class="Functional NonEq hide_class">violation_NonEq_error_main_3</option>
+            <option class="Functional NonEq hide_class">violation_NonEq_error_main_1</option>
+            <option class="Functional NonEq hide_class">violation_NonEq_error_main_4</option>
+            <option class="Functional NonEq hide_class">violation_NonEq_error_main_5</option>
+            <option class="Functional NonEq hide_class">violation_NonEq_error_main_6</option>
+            <option class="Functional NonEq hide_class">violation_NonEq_error_main_7</option>
+            <option class="Functional NonEq hide_class">violation_NonEq_error_main_8</option>
           </optgroup>
-          <optgroup class="item NotMapped">
-            <option value="viol9" class="NotMapped hide_class">violation_NotMapped_warning_1</option>
-            <option value="viol10" class="NotMapped hide_class">violation_NotMapped_warning_2</option>
-            <option value="viol11" class="NotMapped hide_class">violation_NotMapped_warning_3</option>
-            <option value="viol12" class="NotMapped hide_class">violation_NotMapped_warning_4</option>
-            <option value="viol13" class="NotMapped hide_class">violation_NotMapped_warning_5</option>
-            <option value="viol14" class="NotMapped hide_class">violation_NotMapped_warning_6</option>
-            <option value="viol15" class="NotMapped hide_class">violation_NotMapped_warning_7</option>
-            <option value="viol16" class="NotMapped hide_class">violation_NotMapped_warning_8</option>
-            <option value="viol17" class="NotMapped hide_class">violation_NotMapped_warning_9</option>
-            <option value="viol18" class="NotMapped hide_class">violation_NotMapped_warning_10</option>
+          <optgroup class="item Functional NotMapped">
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_1</option>
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_2</option>
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_3</option>
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_4</option>
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_5</option>
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_6</option>
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_7</option>
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_8</option>
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_9</option>
+            <option class="Functional NotMapped hide_class">violation_NotMapped_warning_10</option>
           </optgroup>
-          <optgroup class="item Aborts">
-            <option value="viol9" class="Aborts hide_class">violation_Aborts_warning_1</option>
-            <option value="viol10" class="Aborts hide_class">violation_Aborts_warning_2</option>
-            <option value="viol11" class="Aborts hide_class">violation_Aborts_warning_3</option>
-            <option value="viol12" class="Aborts hide_class">violation_Aborts_warning_4</option>
-            <option value="viol13" class="Aborts hide_class">violation_Aborts_warning_5</option>
-            <option value="viol14" class="Aborts hide_class">violation_Aborts_warning_6</option>
-            <option value="viol15" class="Aborts hide_class">violation_Aborts_warning_7</option>
-            <option value="viol16" class="Aborts hide_class">violation_Aborts_warning_8</option>
-            <option value="viol17" class="Aborts hide_class">violation_Aborts_warning_9</option>
-            <option value="viol18" class="Aborts hide_class">violation_Aborts_warning_10</option>
+          <optgroup class="item Functional Aborts">
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_1</option>
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_2</option>
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_3</option>
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_4</option>
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_5</option>
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_6</option>
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_7</option>
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_8</option>
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_9</option>
+            <option class="Functional Aborts hide_class">violation_Aborts_warning_10</option>
           </optgroup>
-          <optgroup class="item ExtraPIPO">
-            <option value="viol9" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_1</option>
-            <option value="viol10" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_2</option>
-            <option value="viol11" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_3</option>
-            <option value="viol12" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_4</option>
-            <option value="viol13" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_5</option>
-            <option value="viol14" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_6</option>
-            <option value="viol15" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_7</option>
-            <option value="viol16" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_8</option>
-            <option value="viol17" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_9</option>
-            <option value="viol18" class="ExtraPIPO hide_class">violation_Extra_PI_PO_warning_10</option>
+          <optgroup class="item Functional ExtraPIPO">
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_1</option>
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_2</option>
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_3</option>
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_4</option>
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_5</option>
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_6</option>
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_7</option>
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_8</option>
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_9</option>
+            <option class="Functional ExtraPIPO hide_class">violation_Extra_PI_PO_warning_10</option>
           </optgroup>
-          <optgroup class="item CPG">
-            <option value="viol19" class="CPG hide_class">violation_CPG_information_1</option>
-            <option value="viol20" class="CPG hide_class">violation_CPG_information_2</option>
-            <option value="viol21" class="CPG hide_class">violation_CPG_information_3</option>
-            <option value="viol22" class="CPG hide_class">violation_CPG_information_4</option>
-            <option value="viol23" class="CPG hide_class">violation_CPG_information_5</option>
+          <optgroup class="item LowPowerViolations CPG">
+            <option class="LowPowerViolations CPG hide_class">violation_CPG_information_1</option>
+            <option class="LowPowerViolations CPG hide_class">violation_CPG_information_2</option>
+            <option class="LowPowerViolations CPG hide_class">violation_CPG_information_3</option>
+            <option class="LowPowerViolations CPG hide_class">violation_CPG_information_4</option>
+            <option class="LowPowerViolations CPG hide_class">violation_CPG_information_5</option>
           </optgroup>
-          <optgroup class="item PST">
-            <option value="viol24" class="PST hide_class">violation_PST_error_main_1</option>
-            <option value="viol25" class="PST hide_class">violation_PST_error_main_2</option>
-            <option value="viol26" class="PST hide_class">violation_PST_error_main_3</option>
-            <option value="viol27" class="PST hide_class">violation_PST_error_main_4</option>
-            <option value="viol28" class="PST hide_class">violation_PST_error_main_5</option>
-            <option value="viol29" class="PST hide_class">violation_PST_error_main_6</option>
+          <optgroup class="item LowPowerViolations PST">
+            <option class="LowPowerViolations PST hide_class">violation_PST_error_main_1</option>
+            <option class="LowPowerViolations PST hide_class">violation_PST_error_main_2</option>
+            <option class="LowPowerViolations PST hide_class">violation_PST_error_main_3</option>
+            <option class="LowPowerViolations PST hide_class">violation_PST_error_main_4</option>
+            <option class="LowPowerViolations PST hide_class">violation_PST_error_main_5</option>
+            <option class="LowPowerViolations PST hide_class">violation_PST_error_main_6</option>
           </optgroup>
-          <optgroup class="item CPC">
-            <option value="viol30" class="CPC hide_class">violation_CPC_main_wanrings_1</option>
-            <option value="viol31" class="CPC hide_class">violation_CPC_main_wanrings_2</option>
-            <option value="viol32" class="CPC hide_class">violation_CPC_main_wanrings_3</option>
-            <option value="viol33" class="CPC hide_class">violation_CPC_main_wanrings_4</option>
-            <option value="viol34" class="CPC hide_class">violation_CPC_main_wanrings_5</option>
-            <option value="viol35" class="CPC hide_class">violation_CPC_main_wanrings_6</option>
-            <option value="viol36" class="CPC hide_class">violation_CPC_main_wanrings_7</option>
-            <option value="viol37" class="CPC hide_class">violation_CPC_main_wanrings_8</option>
-            <option value="viol38" class="CPC hide_class">violation_CPC_main_wanrings_9</option>
-            <option value="viol39" class="CPC hide_class">violation_CPC_main_wanrings_10</option>
+          <optgroup class="item LowPowerViolations CPC">
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_1</option>
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_2</option>
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_3</option>
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_4</option>
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_5</option>
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_6</option>
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_7</option>
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_8</option>
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_9</option>
+            <option class="LowPowerViolations CPC hide_class">violation_CPC_main_wanrings_10</option>
           </optgroup>
-          <optgroup class="item HRC3p10">
-            <option value="viol40" class="HRC3p10 hide_class">violation_HRC3p10_must_fix_1</option>
-            <option value="viol41" class="HRC3p10 hide_class">violation_HRC3p10_must_fix_2</option>
-            <option value="viol42" class="HRC3p10 hide_class">violation_HRC3p10_must_fix_3</option>
-            <option value="viol43" class="HRC3p10 hide_class">violation_HRC3p10_must_fix_4</option>
-            <option value="viol44" class="HRC3p10 hide_class">violation_HRC3p10_must_fix_5</option>
+          <optgroup class="item RuleCheck HRC3p10">
+            <option class="RuleCheck HRC3p10 hide_class">violation_HRC3p10_must_fix_1</option>
+            <option class="RuleCheck HRC3p10 hide_class">violation_HRC3p10_must_fix_2</option>
+            <option class="RuleCheck HRC3p10 hide_class">violation_HRC3p10_must_fix_3</option>
+            <option class="RuleCheck HRC3p10 hide_class">violation_HRC3p10_must_fix_4</option>
+            <option class="RuleCheck HRC3p10 hide_class">violation_HRC3p10_must_fix_5</option>
           </optgroup>
-          <optgroup class="item RTL7p1">
-            <option value="viol45" class="RTL7p1 hide_class">violation_3_2_Fix_it_1</option>
-            <option value="viol46" class="RTL7p1 hide_class">violation_3_2_Fix_it_2</option>
-            <option value="viol47" class="RTL7p1 hide_class">violation_3_2_Fix_it_3</option>
-            <option value="viol48" class="RTL7p1 hide_class">violation_3_2_Fix_it_4</option>
-            <option value="viol49" class="RTL7p1 hide_class">violation_3_2_Fix_it_5</option>
-            <option value="viol50" class="RTL7p1 hide_class">violation_3_2_Fix_it_6</option>
-            <option value="viol51" class="RTL7p1 hide_class">violation_3_2_Fix_it_7</option>
-            <option value="viol52" class="RTL7p1 hide_class">violation_3_2_Fix_it_8</option>
-            <option value="viol53" class="RTL7p1 hide_class">violation_3_2_Fix_it_9</option>
-            <option value="viol54" class="RTL7p1 hide_class">violation_3_2_Fix_it_10</option>
+          <optgroup class="item RuleCheck RTL7p1">
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_1</option>
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_2</option>
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_3</option>
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_4</option>
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_5</option>
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_6</option>
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_7</option>
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_8</option>
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_9</option>
+            <option class="RuleCheck RTL7p1 hide_class">violation_3_2_Fix_it_10</option>
           </optgroup>
 
 
@@ -531,7 +515,7 @@
     });
     // select_option.classList.add("green_class")
     // const inputElement = document.getElementById("inputBox");
-    let className1All = selectedOptions[0].className.split(' ')[0];
+    const className1All = selectedOptions[0].className.split(' ')[0] + " " + selectedOptions[0].className.split(' ')[1];
     let className1Waived = selectedOptions[0].className;
     let count_all1 = document.getElementsByClassName(className1All).length - 1;
     let count_waived1 = document.getElementsByClassName(className1Waived).length;
@@ -671,29 +655,34 @@
     frame1_cat_clicked[i].addEventListener("click", function () {
       length1 = parseInt(this.innerHTML.replace(/.*\[/g, '').replace(/\]$/g, '').trim())
       console.log("frame1_clicked is: ", this.innerText, length1, (typeof length1))
+      let clickClassName1 = this.innerHTML.replace(/\[.*/,'').trim().replace(/-/,'').replace(/ /g,'')
+      console.log("658. Class name is: ",this.innerHTML.replace(/\[.*/,'').trim().replace(/-/,'').replace(/ /g,''))
+      let length1Waived = document.querySelectorAll(`.${clickClassName1}.green_class`).length
+      let length1Unwaived = length1 - length1Waived
+      console.log("661. length1Waived is: ", length1, length1Waived)
       document.getElementById('all').innerHTML = "All [" + length1 + "]"
-      document.getElementById('waived').innerHTML = "Waived" // [" + length1 + "]"
-      document.getElementById('unwaived').innerHTML = "Un-Waived" // [" + length1 + "]"
-      console.log("ID:", this.parentElement.id, "ok", this.parentElement);
-      let className1 = this.parentElement.id + "_"
-      let count_all2 = 0;
-      let count_waived2 = 0;
-      let count_unwaived2 = 0;
-      document.querySelectorAll(`[class*="${className1}"]`).forEach(ele => {
-        if (ele.tagName == "OPTION") {
-          count_all2 += 1;
-        }
-        if (ele.className.includes("green_class")) {
-          count_waived2 += 1;
-        }
-        count_unwaived2 = count_all2 - count_waived2
-      });
-      console.log("All are:", count_all2);
-      console.log("waived are:", count_waived2);
-      console.log("Un-waived are:", count_unwaived2);
-      document.getElementById('all').innerHTML = "All [" + count_all2 + "]"
-      document.getElementById('waived').innerHTML = "Waived [" + count_waived2 + "]"
-      document.getElementById('unwaived').innerHTML = "Un-Waived [" + count_unwaived2 + "]"
+      document.getElementById('waived').innerHTML = "Waived [" + length1Waived + "]"
+      document.getElementById('unwaived').innerHTML = "Un-Waived [" + length1Unwaived + "]"
+      // console.log("ID:", this.parentElement.id, "ok", this.parentElement);
+      // let className1 = this.parentElement.id + "_"
+      // let count_all2 = 0;
+      // let count_waived2 = 0;
+      // let count_unwaived2 = 0;
+      // document.querySelectorAll(`[class*="${className1}"]`).forEach(ele => {
+      //   if (ele.tagName == "OPTION") {
+      //     count_all2 += 1;
+      //   }
+      //   if (ele.className.includes("green_class")) {
+      //     count_waived2 += 1;
+      //   }
+      //   count_unwaived2 = count_all2 - count_waived2
+      // });
+      // console.log("All are:", count_all2);
+      // console.log("waived are:", count_waived2);
+      // console.log("Un-waived are:", count_unwaived2);
+      // document.getElementById('all').innerHTML = "All [" + count_all2 + "]"
+      // document.getElementById('waived').innerHTML = "Waived [" + count_waived2 + "]"
+      // document.getElementById('unwaived').innerHTML = "Un-Waived [" + count_unwaived2 + "]"
     });
   }
   for (i = 0; i < frame1_vio_clicked.length; i++) {
